@@ -1,0 +1,98 @@
+The Common Package
+------------------
+
+<h4>Overview</h4>
+
+Provides a collection of utility packages and classes commonly used to support 
+the implementation of other Oracle Coherence Incubator projects.
+
+<h4>Distribution</h4>
+
+The Common Package implementation is distributed in the jar file
+called: `coherence-common-${project.version}.jar`.
+
+However as the Common Package has several other dependencies, we **strongly
+recommend** that developers adopt and use tools like Apache Maven/Ivy/Gradle to
+transitively resolve the said dependencies, instead of attempting to do so manually.
+
+To configure your Apache Maven-based application to use the Common Package,
+simply add the following declaration to your application `pom.xml` file
+`<dependencies>` element.
+
+    <dependency>
+        <groupId>com.oracle.coherence.incubator</groupId>
+        <artifactId>coherence-common</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+
+<h4>Contents</h4>
+
+>   Releases prior to Incubator 12 provided several classes that enabled
+>   the development of customized namespaces for Coherence.  As this
+>   capability is now provided by Coherence 12.1.2+, these classes have
+>   been removed and all dependencies on these capabilities now use
+>   native Coherence.
+>
+>   For information how to develop custom namespaces for Coherence 12.1.2+,
+>   refer to the following official documentation and presentations:
+>
+>   *   [You Tube: Coherence Channel](http://www.youtube.com/user/OracleCoherence)
+>   *   [You Tube: Coherence 12.1.2 Play List](http://www.youtube.com/playlist?list=PLxqhEJ4CA3JtQwuPS8Qmd88lGX-gsIbHV)
+>   *   [Building Your Own Services (and Namespaces)](http://coherence.oracle.com/download/attachments/5112972/Coherence-12.1.2-Configuration-Enhancements.pdf?version=1&modificationDate=1366058577469)
+
+Noteworthy packages, classes and interfaces:
+
+*   The `CoherenceLogHandler` Class:
+
+    A Java Log Handler that writes `java.util.logging.LogRecords` to the 
+    Coherence Logger.  This allows applications to use the standard 
+    `java.util.logging` framework, but have the log records appended 
+    asynchronously to the configured Coherence Logger.
+
+*   The `com.oracle.coherence.common.sequencegenerators` Package:
+
+    A set of interfaces and classes to simplify the creation of sequence numbers, 
+    either locally in a Java Virtual Machine, or across a cluster.
+
+*   The `com.oracle.coherence.common.processors` Package:
+
+    Containing a collection of useful new Entry Processors, including the 
+    `InvokeMethodProcessor` for remotely invoking methods through reflection.
+
+*   The `ObjectProxyFactory` Class:
+    
+    A class to enable the creation of local proxies of objects stored in a 
+    cache, thus allowing direct use of the said objects directly without 
+    knowing their location in a cluster and without using `EntryProcessors` 
+    for access.
+
+*   The `EC2AddressProvider` Class:
+    
+    A class to simplify and automate the dynamic formation a cluster on Amazon 
+    EC2, without needing multi-cast or manually specifying individual IP addresses.
+
+*   Several utility packages for the creation of different types of `Identifiers` 
+    (often useful for cache keys), handling `Tickets`, `Ranges`, `Tuples`, `Leases` 
+    and some customized `ThreadFactories`.
+
+<h4>Cache Configuration Namespaces defined by the this module</h4>
+
+*   *[The Element Namespace](element-namespace.html)*:
+    A namespace enabling runtime transformation of XML elements in a cache 
+    configuration. ie: provides `<cache-config element:introduce-cache-config="...">` 
+    and other functionality.
+    
+*   *[The Filter Namespace](filter-namespace.html)*:
+    A utility namespace providing the ability to define Coherence Filters in
+    Cache Configurations.
+    
+*   *[The JNDI Namespace](jndi-namespace.html)*:
+    A utility namespace providing the ability to lookup resources from JNDI.
+
+<h4>The Amazon EC2 Address Provider</h4>
+
+*   *[The Amazon EC2 AddressProvider](amazon-ec2-addressprovider.html)*
+
+    Amazon provides compute power on demand through its Elastic Compute Cloud (EC2). 
+    The `EC2AddressProvider` makes it easier to run a Coherence-based application 
+    on EC2.

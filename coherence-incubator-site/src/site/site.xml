@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    File: site.xml
+ 
+    DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+    
+    The contents of this file are subject to the terms and conditions of 
+    the Common Development and Distribution License 1.0 (the "License").
+
+    You may not use this file except in compliance with the License.
+
+    You can obtain a copy of the License by consulting the LICENSE.txt file
+    distributed with this file, or by consulting
+    or https://oss.oracle.com/licenses/CDDL
+
+    See the License for the specific language governing permissions
+    and limitations under the License.
+
+    When distributing the software, include this License Header Notice in each
+    file and include the License file LICENSE.txt.
+
+    MODIFICATIONS:
+    If applicable, add the following below the License Header, with the fields
+    enclosed by brackets [] replaced by your own identifying information:
+    "Portions Copyright [year] [name of copyright owner]"
+ -->
+<project name="The Oracle Coherence Incubator" xmlns="http://maven.apache.org/DECORATION/1.1.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.1.0 http://maven.apache.org/xsd/decoration-1.1.0.xsd">
+
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.3.0</version>
+    </skin>
+    
+    <custom>
+        <fluidoSkin>
+            <topBarEnabled>false</topBarEnabled>
+            <sideBarEnabled>true</sideBarEnabled>
+            <topBarIcon>
+                <name>Oracle Coherence Incubator ${project.version}</name>
+                <href>index.html</href>
+            </topBarIcon>
+            <gitHub>
+                <projectId>coherence-community/coherence-incubator/</projectId>
+                <ribbonOrientation>right</ribbonOrientation>
+                <ribbonColor>red</ribbonColor>
+            </gitHub>
+        </fluidoSkin>
+    </custom>
+
+    <body>
+        <head>
+            <link rel="shortcut icon" href="images/incubator-logo.ico"/>
+            <script type="text/javascript" src="js/site.js"></script>
+            <script type="text/javascript">
+
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-39051314-1']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+
+            </script>
+        </head>
+    
+        <menu name="Oracle Coherence Incubator">
+            <item name="Welcome" href="index.html"/>
+            <item name="Change History" href="history.html"/>
+            <item name="Upgrading" href="upgrading.html"/>
+            <item name="Examples" href="examples.html"/>
+            <item name="Getting Help" href="support.html"/>
+        </menu>
+
+        <menu name="Development">
+            <item name="License" href="license.html"/>
+            <item name="Release Numbers" href="release-numbers.html"/>
+            <item name="Source Code" href="source-code.html"/>
+            <item name="Build Instructions" href="building.html"/>
+            <item name="Issue Tracking" href="issue-tracking.html"/>
+            <item name="Contributions" href="contributions.html"/>
+            <item name="Logging" href="logging.html"/>
+        </menu>
+
+        <menu name="Modules">
+            <item name="The Common Package" href="common/index.html">
+                <item name="The Element Namespace" href="common/element-namespace.html"/>
+                <item name="The Filter Namespace" href="common/filter-namespace.html"/>
+                <item name="The JNDI Namespace" href="common/jndi-namespace.html"/>
+                <item name="Working with Amazon EC2" href="common/amazon-ec2-addressprovider.html"/>
+            </item>
+            <item name="The Command Pattern" href="commandpattern/index.html">
+                <item name="Simple Example" href="commandpattern/simple-example.html"/>
+            </item>
+            <item name="The Functor Pattern" href="functorpattern/index.html">
+                <item name="Simple Example" href="functorpattern/simple-example.html"/>
+            </item>
+            <item name="The Processing Pattern" href="processingpattern/index.html">
+                <item name="Configuration" href="processingpattern/configuration.html"/>
+                <item name="Monitoring" href="processingpattern/monitoring.html"/>
+                <item name="The Processing Namespace" href="processingpattern/processing-namespace.html"/>
+                <item name="Simple Example" href="processingpattern/simple-example.html"/>
+                <item name="Pi Calculation Example" href="processingpattern/pi-calculation-example.html"/>
+                <item name="Task Execution Example" href="processingpattern/task-execution-example.html"/>
+            </item>
+            <item name="The Messaging Pattern" href="messagingpattern/index.html"/>
+            <item name="The Event Distribution Pattern" href="eventdistributionpattern/index.html">
+                <item name="The Event Namespace" href="eventdistributionpattern/event-namespace.html"/>
+            </item>
+            <item name="The Push Replication Pattern" href="pushreplicationpattern/index.html">
+                <item name="Active Passive Tutorial" href="pushreplicationpattern/active-passive-tutorial.html"/>
+                <item name="Active Passive Example" href="pushreplicationpattern/active-passive-example.html"/>
+                <item name="Active Active Example" href="pushreplicationpattern/active-active-example.html"/>
+                <item name="Hub And Spoke Example" href="pushreplicationpattern/hub-and-spoke-example.html"/>
+                <item name="Auction Example" href="pushreplicationpattern/auction-example.html"/>
+                <item name="Web Example" href="pushreplicationpattern/web-example.html"/>
+            </item>
+        </menu>
+
+        <footer>
+            <div class="copyright">Copyright &#169; 2008-2013 Oracle Corporation. All rights reserved.</div>
+            <div class="version">Version ${project.version}: ${timestamp}</div>
+        </footer>
+    </body>
+</project>

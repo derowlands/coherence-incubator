@@ -1,0 +1,104 @@
+<h1><img src="images/incubator-logo-134x134.png" alt="Coherence Incubator" height="42" width="42" align="top"/> Coherence Incubator 12</h1>
+
+**Version: ${project.version} built on ${timestamp}**
+
+>   This **Preview Release** of the Coherence Incubator is designed specifically for use
+>   with **Oracle Coherence 12.1.2 and above**.   If you require a release of the
+>   Coherence Incubator for previous releases of Oracle Coherence you should
+>   look for these on the project site: [https://java.net/projects/cohinc/](https://java.net/projects/cohinc/)
+
+<h4>Overview</h4>
+
+The Oracle Coherence Incubator project consists of a collection of examples, organized
+as [Apache Maven](http://maven.apache.org/) modules, demonstrating advanced uses 
+of [Oracle Coherence](http://www.oracle.com/technology/products/coherence/index.html).
+
+The modules themselves consist of a collection of common utilities, tools,
+traditional software pattern implementations, third-party integrations, and
+distributed computing solutions that of which may be used as-is, for research,
+learning, extension or for direct inclusion into Coherence-based applications.
+  
+Complete source code together with documentation is provided to aid in adoption,
+use and understanding.
+
+<h4>Modules:</h4>
+
+The following [Apache Maven](http://maven.apache.org/) modules are defined
+by the Oracle Coherence Incubator.
+
+**The Complete Distribution Module:**
+
+Provides a distribution of all of the Oracle Coherence Incubator modules,
+without their third-party dependencies (like Coherence itself).
+
+[**The Common Package:**](common/index.html)
+
+Provides a collection of utility packages, classes and interfaces commonly 
+used to support the implementation of other Oracle Coherence Incubator modules.
+
+[**The Command Pattern:**](commandpattern/index.html)
+
+Provides a distributed implementation of the classic Command Pattern.
+
+[**The Command Pattern Examples:**](commandpattern/simple-example.html)
+
+Provides example uses of the Command Pattern.
+
+[**The Functor Pattern:**](functorpattern/index.html)
+
+Provides a distributed implementation of the classic Functor Pattern.
+
+[**The Functor Pattern Examples:**](functorpattern/simple-example.html)
+
+Provides example uses of the Functor Pattern.
+
+[**The Processing Pattern:**](processingpattern/index.html)
+
+Provides an mechanism to perform distributed, grid computing with Coherence.
+
+**The Processing Pattern Examples:**
+
+The following examples are provided for the Processing Pattern:
+
+1.  The [Simple Callable Example](processingpattern/simple-example.html)
+
+2.  The [Pi Calculation Example](processingpattern/pi-calculation-example.html)
+
+3.  The [Task Execution Example](processingpattern/task-execution-example.html)
+
+[**The Messaging Pattern:**](messagingpattern/index.html)
+
+Provides a simple implementation of Store and Forward Messaging.
+
+[**The Event Distribution:**](eventdistributionpattern/index.html)
+
+Provides a mechanism to distribute application events over multiple channels. 
+This is core infrastructure for the Push Replication Pattern, but may be used 
+directly with in applications for local or global event distribution.
+
+[**The Push Replication Pattern:**](pushreplicationpattern/index.html)
+
+Provides a mechanism to replicate cache entry events to other clusters and 
+devices (including other clusters separated by WANs).
+
+**The Push Replication Pattern Examples:**
+
+The following examples are provided for the Push Replication Pattern:
+
+1.  The [Active Passive](pushreplicationpattern/active-passive-example.html) Topology
+
+2.  The [Active Active](pushreplicationpattern/active-active-example.html) Topology
+
+3.  The [Hub and Spoke](pushreplicationpattern/hub-and-spoke-example.html) Topology
+
+4.  The [Auction Example](pushreplicationpattern/auction-example.html) (using an Active Active and Active Passive Topologies)
+
+5.  The [Coherence*Web Example](pushreplicationpattern/web-example.html)
+
+<h4>Contributions</h4>
+
+If you are interested in making contributions to the Oracle Coherence Incubator, 
+including defect fixes, documentation, new classes/interfaces/methods/packages 
+or tests, you should read the section on 
+[Contributing to the Oracle Coherence Incubator](contributions.html). 
+

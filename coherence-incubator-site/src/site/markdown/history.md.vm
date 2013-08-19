@@ -1,0 +1,114 @@
+History
+-------
+
+The following sections outline Oracle Coherence Incubator changes in 
+reverse chronological order.
+
+<h3>Version ${project.version} @ ${timestamp} </h3>
+
+<h4>Source and Documentation Contributors</h4>
+
+*   Noah Arliss, Brian Oliver, Paul Mackin, David Rowlands
+
+<h4>Global and Cross-Module Changes</h4>
+
+*   Upgraded projects to use Oracle Coherence 12.1.2-0-0
+
+*   Updated all configuration files to use the latest configuration namespaces.
+    Importantly previous namespace handler implementations remain and are fully
+    operational.  They are simply deprecated in favor of the new implementations.
+
+<h4>coherence-incubator-site (Documentation)</h4>
+
+*   Updated the documentation to reflect support for Oracle Coherence 12.1.2-0-0
+
+<h4>coherence-common</h4>
+
+*   Removed the following packages, classes and interfaces:
+
+    `com.oracle.coherence.common.applications` - now available in Oracle Tools.
+    `com.oracle.coherence.common.backingmaplisteners` - use Coherence 12.1.2 Live Events instead.
+    `com.oracle.coherence.common.builders` - use Coherence 12.1.2 configuration model instead.
+    `com.oracle.coherence.common.configuration` - use Coherence 12.1.2 configuration model instead.
+    `com.oracle.coherence.common.events` - all but interfaces for Event Distribution removed.
+    `com.oracle.coherence.common.logging` - all but CoherenceLogHandler removed.
+    `com.oracle.coherence.common.network` - now available in Oracle Tools.
+    `com.oracle.coherence.common.runtime` - now available in Oracle Tools.
+    `com.oracle.coherence.common.serialization` - use Coherence 12.1.2 serialization annotations instead.
+    `com.oracle.coherence.configuration` - use Coherence 12.1.2 configuration model instead.
+    `com.oracle.coherence.environment` - use Coherence 12.1.2 configuration model instead.
+
+*   Introduced the `com.oracle.coherence.common.liveobjects` package to encapsulate
+    the new implementation of Live Objects (this will soon become an independent pattern)
+
+*   Introduced the `com.oracle.coherence.common.namespace` package to encapsulate
+    the new custom namespace handler implementations for Coherence 12.1.2
+
+*   Removed the `InstanceNamespaceContentHandler` (instance) and `ValueNamespaceContentHandler` (value)
+    namespace handlers.  These are no longer required as regular Coherence 12.1.2 <instance> elements
+    can be used.  These we deprecated in Incubator 11.
+
+<h4>coherence-commandpattern</h4>
+
+*   Refactored to use Live Events instead of Backing Map Listeners.  This included
+    changing the internal cache configuration used for the pattern.
+
+*   Refactored to use internally use Non-Blocking-Finite-State Machines instead
+    of hand-crafted states and thread synchronization.
+
+<h4>coherence-commandpattern-examples</h4>
+
+*   No Changes
+
+<h4>coherence-functorpattern</h4>
+
+*   Refactored to use Live Events instead of Backing Map Listeners.  This included
+    changing the internal cache configuration used for the pattern.
+
+<h4>coherence-functorpattern-examples</h4>
+
+*   No Changes
+
+<h4>coherence-processingpattern</h4>
+
+*   Refactored to use Live Events instead of Backing Map Listeners.  This included
+    changing the internal cache configuration used for the pattern.
+
+*   Refactored to the configuration to use the extensible namespace feature
+    of Oracle Coherence 12.1.2.
+
+<h4>coherence-processingpattern-examples</h4>
+
+*   No Changes
+
+<h4>coherence-messagingpattern</h4>
+
+*   Refactored to use Live Events instead of Backing Map Listeners.  This included
+    changing the internal cache configuration used for the pattern.
+
+*   Refactored to use java.util.Logging.
+
+*   Refactored to use internally use Non-Blocking-Finite-State Machines instead
+    of hand-crafted states and thread synchronization.
+
+<h4>coherence-eventdistributionpattern</h4>
+
+*   Refactored to use Live Events instead of Backing Map Listeners.  This included
+    changing the internal cache configuration used for the pattern.
+
+*   Refactored to the configuration to use the extensible namespace feature
+    of Oracle Coherence 12.1.2.
+
+<h4>coherence-pushreplicationpattern</h4>
+
+*   [COHINC-65](http://java.net/jira/browse/COHINC-65): Resolved issue
+    where attempting to remove non-existing or expired entries would not
+    be replicated.
+
+<h4>coherence-pushreplicationpattern-examples</h4>
+
+*   No Changes
+
+<h4>coherence-pushreplicationpattern-web-example</h4>
+
+*   No Changes
